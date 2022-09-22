@@ -16,5 +16,6 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.Translate(new Vector3(0, Input.GetAxis("Player2") * Time.deltaTime * playerSpeed, 0));
         }
+        transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, -3.770001f, 3.770001f), transform.position.z);
     }
 }
