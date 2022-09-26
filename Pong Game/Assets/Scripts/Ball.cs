@@ -4,6 +4,8 @@ public class Ball : MonoBehaviour
 {
     public float MoveSpeed;
     Vector3 BallDirection;
+    public AudioSource Hit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,13 @@ public class Ball : MonoBehaviour
         {
             BallDirection = Vector3.Reflect(BallDirection, collision.contacts[0].normal);
         }
+
+        //Hit SFX
+        if (collision.gameObject.CompareTag("Paddle"))
+        {
+            HitAudio();
+        }
+        Debug.Log("Paddle Hit");
     }
 
     //Resets the ball
@@ -48,5 +57,10 @@ public class Ball : MonoBehaviour
         transform.position = new Vector3(0, 0, 0);
         BallDirection = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
         BallDirection = BallDirection.normalized;
+    }
+
+    public void HitAudio()
+    {
+        Hit.Play();
     }
 }

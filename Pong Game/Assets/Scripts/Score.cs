@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Score : MonoBehaviour
 {
@@ -19,5 +20,27 @@ public class Score : MonoBehaviour
     {
         player2Score++;
         p2Text.text = player2Score.ToString();
+    }
+
+    public void Player1Wins()
+    {
+        SceneManager.LoadScene("Player1Wins");
+    }
+    public void Player2Wins()
+    {
+        SceneManager.LoadScene("Player2Wins");
+    }
+
+    public void Update()
+    {
+        if (player1Score == 10)
+        {
+            Player1Wins();
+        }
+
+        if (player2Score == 10)
+        {
+            Player2Wins();
+        }
     }
 }
