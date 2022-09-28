@@ -4,7 +4,8 @@ public class Ball : MonoBehaviour
 {
     public float MoveSpeed;
     Vector3 BallDirection;
-    public AudioSource Hit;
+    public AudioSource HitSound;
+    public AudioSource ScoreSound;
 
     // Start is called before the first frame update
     void Start()
@@ -44,11 +45,13 @@ public class Ball : MonoBehaviour
         {
             ResetBall();
             GameObject.Find("Canvas").GetComponent<Score>().AddP2Score();
+            ScoreAudio();
         }
         if (collision.gameObject.CompareTag("RightBarrier"))
         {
             ResetBall();
             GameObject.Find("Canvas").GetComponent<Score>().AddP1Score();
+            ScoreAudio();
         }
     }
 
@@ -61,6 +64,11 @@ public class Ball : MonoBehaviour
 
     public void HitAudio()
     {
-        Hit.Play();
+        HitSound.Play();
+    }
+
+    public void ScoreAudio()
+    {
+        ScoreSound.Play();
     }
 }
