@@ -267,8 +267,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6f6466902edb92f468d91e0b5917f327, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 852bc47252e5dc6479eae0f6937d53b7, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1880,6 +1880,7 @@ MonoBehaviour:
   player2Score: 0
   p1Text: {fileID: 1920434848}
   p2Text: {fileID: 2076471570}
+  Challenge: {fileID: 4042894476490806604, guid: dda63caf90887ab4d8018f22f5f7883d, type: 3}
 --- !u!1 &1746155243
 GameObject:
   m_ObjectHideFlags: 0
