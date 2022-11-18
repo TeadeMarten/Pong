@@ -11,9 +11,10 @@ public class SettingsMenu : MonoBehaviour
     public AudioMixer audioMixer;
     void update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Escape))
         {
             SceneManager.LoadScene("MainMenu");
+            Debug.Log("Escape Pressed");
         }
     }
 

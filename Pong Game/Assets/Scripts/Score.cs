@@ -34,16 +34,6 @@ public class Score : MonoBehaviour
         SceneManager.LoadScene("Player2Wins");
     }
 
-    public void challengeStart()
-    {
-        Instantiate(Challenge);
-    }
-
-    private void Start()
-    {
-        Destroy(Challenge);
-    }
-
     public void Update()
     {
         if (player1Score == 10)
@@ -54,18 +44,6 @@ public class Score : MonoBehaviour
         if (player2Score == 10)
         {
             Player2Wins();
-        }
-
-        if (player1Score == 5 && SpawnChallenge)
-        {
-            Instantiate(Challenge);
-            SpawnChallenge = false;
-        }
-
-        if (player2Score == 5 && SpawnChallenge)
-        {
-            Instantiate(Challenge);
-            SpawnChallenge = false;
         }
     }
 

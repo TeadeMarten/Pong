@@ -1880,7 +1880,7 @@ MonoBehaviour:
   player2Score: 0
   p1Text: {fileID: 1920434848}
   p2Text: {fileID: 2076471570}
-  Challenge: {fileID: 4042894476490806604, guid: dda63caf90887ab4d8018f22f5f7883d, type: 3}
+  Challenge: {fileID: 8295875444873329473, guid: bebc62be2d538164a81e3c58ed98d4e1, type: 3}
 --- !u!1 &1746155243
 GameObject:
   m_ObjectHideFlags: 0

@@ -34,8 +34,9 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.CompareTag("Paddle"))
         {
             HitAudio();
+            Debug.Log("Paddle Hit");
         }
-        Debug.Log("Paddle Hit");
+        
     }
 
     //Resets the ball
